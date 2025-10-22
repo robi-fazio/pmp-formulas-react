@@ -1,67 +1,146 @@
+/* src/App.css */
+
+/* --- Basic Reset & Body --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  background-color: #f4f4f4; /* A light background for the whole page */
+}
+
+/* --- Main App Layout --- */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* --- Header & Footer --- */
+.header,
+.footer {
+  background: #333;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: Arial, sans-serif; line-height: 1.6; }
-.container {
+  padding: 1rem 0; /* Vertical padding only */
   width: 100%;
-  max-width: 960px;   /* The maximum width of your content */
-  margin-left: auto;  /* These two margin rules automatically center the container */
-  margin-right: auto;
-  padding-left: 1rem; /* Adds some space on the sides, crucial for mobile */
-  padding-right: 1rem;
 }
-.App { min-height: 100vh; display: flex; flex-direction: column; }
-.header, .footer { background: #333; color: white; padding: 1rem; text-align: center; }
-.menu ul { list-style: none; display: flex; justify-content: center; background: #f4f4f4; padding: 1rem 0; }
-.menu li { margin: 0 1rem; }
-.menu a { text-decoration: none; color: #333; }
+
+.header-content,
+.footer-content {
+  max-width: 960px;
+  margin: 0 auto; /* This is the key centering rule */
+  padding: 0 1rem; /* Padding for mobile */
+  text-align: center;
+}
+
+/* --- Navigation Menu --- */
+.menu {
+  width: 100%;
+  background: #e9e9e9;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0.75rem 0;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+}
+
+.menu li {
+  margin: 0 1.5rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* --- Main Content Area --- */
 .content {
-  flex: 1;
-  padding-top: 2rem;    /* Keep the vertical padding */
-  padding-bottom: 2rem;
+  flex: 1; /* Allows content to fill available space */
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto; /* Center the main content area */
+  padding: 2rem 1rem;
 }
-.input-form { display: flex; flex-direction: column; gap: 1rem; margin: 1rem 0; }
-.input-form label { display: flex; flex-direction: column; }
-.adsense-placeholder { background: #eee; padding: 1rem; margin: 1rem 0; text-align: center; }
-.explanation { margin: 1rem 0; border-left: 4px solid #007bff; padding-left: 1rem; }
+
+/* --- Formula Page Specifics --- */
+.formula-page h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 1rem 0;
+}
+
+.input-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold; 
+}
+
+.input-form input {
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* --- Results & Explanation --- */
+.results-display {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.results-display h3 {
+  margin-bottom: 0.5rem;
+}
+
+.results-display p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.explanation {
+  margin: 1rem 0;
+  border-left: 4px solid #007bff;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+/* --- Placeholder for Ads --- */
+.adsense-placeholder {
+  background: #eee;
+  padding: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+  border: 1px dashed #ccc;
+}
+
+/* --- Responsive Adjustments --- */
 @media (min-width: 600px) {
-  .menu ul { flex-direction: row; }
-  .input-form { flex-direction: row; justify-content: space-around; }
+  .input-form {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }

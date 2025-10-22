@@ -1,10 +1,10 @@
 // src/App.js
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import './App.css'; 
 import EVMCalculator from './pages/EVMCalculator';
 
 function App() {
@@ -13,21 +13,18 @@ function App() {
       <div className="App">
         <Header />
         <nav className="menu">
-          {/* Menu items remain the same */}
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/evm">Earned Value Management</Link></li>
           </ul>
         </nav>
         
-        {/* We apply the container here */}
+        {/* The "content" class now handles its own centering */}
         <main className="content">
-          <div className="container">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/evm" element={<EVMCalculator />} />
-            </Routes>
-          </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/evm" element={<EVMCalculator />} />
+          </Routes>
         </main>
         
         <Footer />
