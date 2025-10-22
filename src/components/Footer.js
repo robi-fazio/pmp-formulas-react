@@ -1,19 +1,36 @@
-// src/components/Footer.js
 import React from 'react';
 
-const Footer = () => {
+function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="footer">
+    <footer className="app-footer">
       <div className="footer-content">
-        <p>Created by [Your Name] | Contact: [your.email@example.com]</p>
-        <ul>
-          <li><a href="https://www.pmi.org" target="_blank" rel="noopener noreferrer">PMI Official Site</a></li>
-          <li><a href="/about">About</a></li>
-        </ul>
-        <div className="adsense-placeholder">Footer AdSense Banner</div>
+        <div className="footer-section">
+          <h3>PMP Formula Calculator</h3>
+          <p>Professional Project Management Formulas at your fingertips</p>
+        </div>
+        
+        <div className="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://www.pmi.org" target="_blank" rel="noopener noreferrer">PMI.org</a></li>
+            <li><a href="https://www.pmi.org/certifications/project-management-pmp" target="_blank" rel="noopener noreferrer">PMP Certification</a></li>
+          </ul>
+        </div>
+        
+        <div className="footer-section">
+          <h4>About</h4>
+          <p>This tool helps PMP candidates and project managers calculate essential project management formulas quickly and accurately.</p>
+        </div>
+      </div>
+      
+      <div className="footer-bottom">
+        <p>&copy; {currentYear} PMP Formula Calculator. All rights reserved.</p>
+        <p>Educational purposes only. Not affiliated with PMI.</p>
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;
