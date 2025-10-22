@@ -3,7 +3,7 @@ name: 🚀 Deploy to cPanel on Push
 on:
   push:
     branches:
-      - main  # Change to 'master' if that's your branch name
+      - main
 
 jobs:
   deploy:
@@ -17,7 +17,7 @@ jobs:
       - name: 📦 Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # or your preferred Node version
+          node-version: '18'
       
       - name: 📥 Install dependencies
         run: npm install
@@ -32,4 +32,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build/
-          server-dir: /public_html/pmp-formulas/
+          server-dir: ./
