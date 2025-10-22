@@ -55,7 +55,7 @@ function App() {
       case 'bcr': return <BCR />;
       case 'paybackPeriod': return <PaybackPeriod />;
       case 'evmComprehensive': return <EVMComprehensive />;
-      default: return <PlannedValue />;
+      default: return <EVMComprehensive />;
     }
   };
 
@@ -65,8 +65,11 @@ function App() {
         <h1>PMP Formula Calculator</h1>
         <p>Professional Project Management Formulas</p>
       </header>
+
+      <Navigation activeFormula={activeFormula} setActiveFormula={setActiveFormula} />
+      
       <div className="main-container">
-        <Navigation activeFormula={activeFormula} setActiveFormula={setActiveFormula} />
+        
         <div className="formula-container">
           {renderFormula()}
         </div>

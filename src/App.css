@@ -478,3 +478,243 @@ body {
   color: #333;
   font-style: italic;
 }
+/* Hamburger Button - RIGHT SIDE */
+.hamburger-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;  /* Changed from left to right */
+  z-index: 1001;
+  background-color: #667eea;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.hamburger-btn:hover {
+  background-color: #764ba2;
+  transform: scale(1.05);
+}
+
+/* Menu Overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Navigation Menu - SLIDE FROM RIGHT */
+.navigation-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;  /* Changed from left to right */
+  width: 100%;
+  max-width: 960px;
+  height: 100vh;
+  background-color: white;
+  z-index: 1000;
+  transition: right 0.3s ease;  /* Changed from left to right */
+  overflow-y: auto;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);  /* Negative value for left shadow */
+}
+
+.navigation-menu.open {
+  right: 0;  /* Changed from left to right */
+}
+
+/* Menu Header */
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.menu-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.close-btn:hover {
+  opacity: 0.8;
+}
+
+/* Menu Content */
+.menu-content {
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+/* Category Slide */
+.category-slide {
+  padding: 1rem;
+  min-height: 300px;
+  position: relative;
+  padding-top: 50px;
+}
+
+.category-title {
+  color: #667eea;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #667eea;
+  text-align: center;
+}
+
+/* Formula List */
+.formula-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.formula-list li {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: #333;
+  font-weight: 500;
+  border-left: 4px solid transparent;
+}
+
+.formula-list li:hover {
+  background-color: #f0f4ff;
+  border-left-color: #667eea;
+  transform: translateX(5px);
+}
+
+.formula-list li.active {
+  background-color: #667eea;
+  color: white;
+  border-left-color: #764ba2;
+}
+
+/* Carousel Customization - DOTS ABOVE CATEGORY TITLE */
+.menu-content .slick-slider {
+  position: relative;
+}
+
+.menu-content .slick-dots {
+  position: absolute;
+  top: 15px;  /* Position within the slide, above title */
+  bottom: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin: 0;
+  z-index: 1;  /* Below arrows but above content */
+}
+
+.slick-dots li {
+  margin: 0 5px;
+}
+
+.slick-dots li button:before {
+  color: #667eea;
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #667eea;
+  opacity: 1;
+  font-size: 14px;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 10;  /* Higher z-index so arrows work */
+  width: 40px;
+  height: 40px;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #667eea;
+  font-size: 30px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .navigation-menu {
+    max-width: 100%;
+  }
+
+  .menu-content {
+    padding: 1rem 0.5rem;
+  }
+
+  .category-slide {
+    padding: 0.5rem;
+    padding-top: 45px;  /* Adjust padding for mobile */
+  }
+  
+  .menu-content .slick-dots {
+    top: 10px;  /* Adjust dots position for mobile */
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 24px;
+  }
+}
+
+/* Desktop - wider screens */
+@media (min-width: 961px) {
+  .navigation-menu {
+    right: -960px;  /* Changed from left to right */
+  }
+
+  .navigation-menu.open {
+    right: 0;  /* Changed from left to right */
+  }
+}
