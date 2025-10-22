@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; line-height: 1.6; }
+.container {
+  width: 100%;
+  max-width: 960px;   /* The maximum width of your content */
+  margin-left: auto;  /* These two margin rules automatically center the container */
+  margin-right: auto;
+  padding-left: 1rem; /* Adds some space on the sides, crucial for mobile */
+  padding-right: 1rem;
+}
+.App { min-height: 100vh; display: flex; flex-direction: column; }
+.header, .footer { background: #333; color: white; padding: 1rem; text-align: center; }
+.menu ul { list-style: none; display: flex; justify-content: center; background: #f4f4f4; padding: 1rem 0; }
+.menu li { margin: 0 1rem; }
+.menu a { text-decoration: none; color: #333; }
+.content {
+  flex: 1;
+  padding-top: 2rem;    /* Keep the vertical padding */
+  padding-bottom: 2rem;
+}
+.input-form { display: flex; flex-direction: column; gap: 1rem; margin: 1rem 0; }
+.input-form label { display: flex; flex-direction: column; }
+.adsense-placeholder { background: #eee; padding: 1rem; margin: 1rem 0; text-align: center; }
+.explanation { margin: 1rem 0; border-left: 4px solid #007bff; padding-left: 1rem; }
+@media (min-width: 600px) {
+  .menu ul { flex-direction: row; }
+  .input-form { flex-direction: row; justify-content: space-around; }
+}
