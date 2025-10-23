@@ -9,6 +9,21 @@ function Navigation({ activeFormula, setActiveFormula }) {
 
   // Organize formulas by category
   const categories = [
+/*       {
+    name: "Home",
+    formulas: [
+      { id: 'home', name: 'Home' }
+    ]
+  }, */
+      {
+      name: 'Project Selection',
+      formulas: [
+        { id: 'npv', name: 'Net Present Value (NPV)' },
+        { id: 'roi', name: 'Return on Investment (ROI)' },
+        { id: 'bcr', name: 'Benefit Cost Ratio (BCR)' },
+        { id: 'paybackPeriod', name: 'Payback Period' }
+      ]
+    },
     {
       name: 'Earned Value Management',
       formulas: [
@@ -47,16 +62,8 @@ function Navigation({ activeFormula, setActiveFormula }) {
       formulas: [
         { id: 'communicationChannels', name: 'Communication Channels' }
       ]
-    },
-    {
-      name: 'Project Selection',
-      formulas: [
-        { id: 'npv', name: 'Net Present Value (NPV)' },
-        { id: 'roi', name: 'Return on Investment (ROI)' },
-        { id: 'bcr', name: 'Benefit Cost Ratio (BCR)' },
-        { id: 'paybackPeriod', name: 'Payback Period' }
-      ]
     }
+
   ];
 
   // Carousel settings

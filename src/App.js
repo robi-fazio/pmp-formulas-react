@@ -72,7 +72,7 @@ function App() {
       
       <div className="main-container">
         
-        <div className="formula-container">
+        <div className={`formula-container ${activeFormula === 'home' ? 'homepage-container' : ''}`}>
           {renderFormula()}
         </div>
       </div>
