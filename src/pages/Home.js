@@ -27,16 +27,13 @@ function Home() {
       </div>
       
       <div className="description">
-        <p style={{textAlign: 'center', marginTop: '2rem'}}>
-          
-        </p>
-      </div>
-      
-      
-      <div className="description">
-        <p>Select a formula from the menu to get started with your calculations.</p>
+       <p>Select a formula from the menu to get started with your calculations.</p>
         <p>This tool helps PMP candidates and project managers calculate essential project management formulas quickly and accurately.</p>
+      
+          
+        
       </div>
+
       
       {/* <div className="input-section">
         <p style={{textAlign: 'center', color: '#667eea', fontWeight: 'bold'}}>
