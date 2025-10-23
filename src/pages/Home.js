@@ -1,19 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const Home = () => {
+function Home() {
   return (
-    <div className="home">
-      <h2>Welcome to PMP Formulas</h2>
-      <p>Enter your project data to calculate key PMP formulas. All based on PMBOK 7th Edition.</p>
-      <ul>
-        <li><Link to="/evm">Earned Value Management (SPI, CPI, etc.)</Link></li>
-        <li>Critical Path Method (coming soon)</li>
-        <li>Pert Estimation (coming soon)</li>
-        {/* List all ~16-20 formulas from sources */}
-      </ul>
+    <div className="formula-card">
+      <h2>Welcome to PMP Formula Calculator</h2>
+      
+      
+        <p><strong>Professional Project Management Formulas</strong></p>
+      
+      
+      <div className="description">
+        <p>Select a formula from the menu to get started with your calculations.</p>
+        <p>This tool helps PMP candidates and project managers calculate essential project management formulas quickly and accurately.</p>
+      </div>
+      
+      <div className="input-section">
+        <p style={{textAlign: 'center', color: '#667eea', fontWeight: 'bold'}}>
+          Choose a formula from the menu to begin
+        </p>
+      </div>
     </div>
   );
-};
+}
 
 export default Home;

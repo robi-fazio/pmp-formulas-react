@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import Home from './pages/Home';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PlannedValue from './components/formulas/PlannedValue';
@@ -28,10 +29,11 @@ import EVMComprehensive from './components/formulas/EVMComprehensive';
 
 
 function App() {
-  const [activeFormula, setActiveFormula] = useState('plannedValue');
+  const [activeFormula, setActiveFormula] = useState('home');
 
   const renderFormula = () => {
     switch(activeFormula) {
+      case 'home': return <Home />;
       case 'plannedValue': return <PlannedValue />;
       case 'earnedValue': return <EarnedValue />;
       case 'scheduleVariance': return <ScheduleVariance />;
@@ -55,7 +57,7 @@ function App() {
       case 'bcr': return <BCR />;
       case 'paybackPeriod': return <PaybackPeriod />;
       case 'evmComprehensive': return <EVMComprehensive />;
-      default: return <EVMComprehensive />;
+      default: return <Home />;
     }
   };
 
@@ -63,7 +65,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>PMP Formula Calculator</h1>
-        <p>Professional Project Management Formulas</p>
+        
       </header>
 
       <Navigation activeFormula={activeFormula} setActiveFormula={setActiveFormula} />

@@ -24,7 +24,7 @@ body {
 /* App Header */
 .App-header {
   background-color: #f0efeb; /* White replacing semi-transparent for crisp look */
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -33,8 +33,9 @@ body {
   font-family: 'Helvetica', sans-serif; /* Serif font for main title, matching robifazio.com headings */
   color: #FF6B35; /* Orange for title, replacing purple */
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+  margin-bottom: 0rem;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 .App-header p {
@@ -46,7 +47,7 @@ body {
 /* Main Container */
 .main-container {
   display: flex;
-  max-width: 960px;
+  max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
   gap: 2rem;
@@ -120,12 +121,13 @@ body {
 
 .formula-card h2 {
   font-family: 'Helvetica', sans-serif; /* Serif for formula titles */
-  color: #FF6B35; /* Orange for headings */
+  color: #93ac5b; 
   margin-bottom: 1rem;
   font-size: 2rem;
-  border-bottom: 3px solid #FF6B35; /* Orange border replacing purple */
+  border-bottom: 0px solid #FF6B35; /* Orange border replacing purple */
   padding-bottom: 0.5rem;
-  font-weight: 600;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 .formula-display {
@@ -594,7 +596,7 @@ body {
   width: 100%;
   max-width: 560px;
   height: 100vh;
-  background-color: #FFFFFF; /* White replacing white (no change needed, but consistent) */
+  background-color: #f0efeb; /* White replacing white (no change needed, but consistent) */
   z-index: 1000;
   transition: right 0.3s ease;
   overflow-y: auto;
