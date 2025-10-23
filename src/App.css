@@ -10,7 +10,7 @@ body {
   font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; /* Open Sans as primary body font from robifazio.com */
-  background-color: #FFFFFF; /* White background replacing purple gradient for clean readability */
+  background-color: #f0efeb; 
   color: #1A1A1A; /* Dark near-black for primary body text */
   line-height: 1.6;
   font-weight: 400;
@@ -23,14 +23,14 @@ body {
 
 /* App Header */
 .App-header {
-  background-color: #FFFFFF; /* White replacing semi-transparent for crisp look */
+  background-color: #f0efeb; /* White replacing semi-transparent for crisp look */
   padding: 2rem;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .App-header h1 {
-  font-family: 'Playfair Display', serif; /* Serif font for main title, matching robifazio.com headings */
+  font-family: 'Helvetica', sans-serif; /* Serif font for main title, matching robifazio.com headings */
   color: #FF6B35; /* Orange for title, replacing purple */
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
@@ -46,7 +46,7 @@ body {
 /* Main Container */
 .main-container {
   display: flex;
-  max-width: 1400px;
+  max-width: 960px;
   margin: 2rem auto;
   padding: 0 1rem;
   gap: 2rem;
@@ -68,7 +68,7 @@ body {
 }
 
 .navigation h2 {
-  font-family: 'Playfair Display', serif; /* Serif for navigation heading */
+  font-family: 'Helvetica', sans-serif; /* Serif for navigation heading */
   color: #FF6B35; /* Orange replacing purple */
   margin-bottom: 1rem;
   font-size: 1.5rem;
@@ -111,7 +111,7 @@ body {
 /* Formula Container */
 .formula-container {
   flex: 1;
-  background-color: #F5F5F5; /* Light gray for containers, replacing semi-transparent */
+  background-color: #e6e5e0; 
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -119,7 +119,7 @@ body {
 }
 
 .formula-card h2 {
-  font-family: 'Playfair Display', serif; /* Serif for formula titles */
+  font-family: 'Helvetica', sans-serif; /* Serif for formula titles */
   color: #FF6B35; /* Orange for headings */
   margin-bottom: 1rem;
   font-size: 2rem;
@@ -197,7 +197,7 @@ body {
 }
 
 .calculate-btn {
-  background-color: #FF6B35; /* Solid orange replacing gradient */
+  background-color: #93ac5b; /* Solid orange replacing gradient */
   color: #FFFFFF;
   padding: 1rem 2rem;
   border: none;
@@ -233,7 +233,7 @@ body {
 }
 
 .result-section h3 {
-  font-family: 'Playfair Display', serif; /* Serif for result headings */
+  font-family: 'Helvetica', sans-serif; /* Serif for result headings */
   color: #FF6B35; /* Orange heading */
   margin-bottom: 1rem;
   font-size: 1.3rem;
@@ -248,7 +248,7 @@ body {
   background-color: #FFFFFF; /* White for value boxes */
   border-radius: 5px;
   color: #FF6B35; /* Orange values */
-  font-family: 'Playfair Display', serif;
+  font-family: 'Helvetica', sans-serif;
 }
 
 .interpretation {
@@ -260,7 +260,7 @@ body {
 }
 
 .interpretation h4 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Helvetica', sans-serif;
   color: #FF6B35; /* Orange subheadings */
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
@@ -274,7 +274,7 @@ body {
 
 /* Footer Styles */
 .app-footer {
-  background-color: #F5F5F5; /* Light gray replacing gradient for footer */
+  background-color: #e6e5e0; /* Light gray replacing gradient for footer */
   color: #1A1A1A; /* Dark text */
   margin-top: 3rem;
   padding: 2rem 0 1rem 0;
@@ -293,7 +293,7 @@ body {
 }
 
 .footer-section h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Helvetica', sans-serif;
   color: #FF6B35; /* Orange for footer headings */
   margin-bottom: 1rem;
   font-size: 1.5rem;
@@ -301,8 +301,8 @@ body {
 }
 
 .footer-section h4 {
-  font-family: 'Playfair Display', serif;
-  color: #1A1A1A; /* Dark for subheadings */
+  font-family: 'Helvetica', sans-serif;
+  color: #87a250; /* Dark for subheadings */
   margin-bottom: 0.75rem;
   font-size: 1.2rem;
   font-weight: 600;
@@ -397,7 +397,7 @@ body {
 }
 
 .evm-section h4 {
-  font-family: 'Playfair Display', serif; /* Serif for section titles */
+  font-family: 'Helvetica', sans-serif; /* Serif for section titles */
   color: #FF6B35; /* Orange */
   margin-bottom: 0.75rem;
   font-size: 1.1rem;
@@ -457,7 +457,7 @@ body {
 .cash-flows-section h4 {
   margin-bottom: 1rem;
   color: #FF6B35; /* Orange heading */
-  font-family: 'Playfair Display', serif;
+  font-family: 'Helvetica', sans-serif;
   font-weight: 600;
 }
 
@@ -592,7 +592,7 @@ body {
   top: 0;
   right: -100%;
   width: 100%;
-  max-width: 960px;
+  max-width: 560px;
   height: 100vh;
   background-color: #FFFFFF; /* White replacing white (no change needed, but consistent) */
   z-index: 1000;
@@ -622,7 +622,7 @@ body {
 .menu-header h2 {
   margin: 0;
   font-size: 1.5rem;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Helvetica', sans-serif;
   font-weight: 600;
 }
 
@@ -657,7 +657,7 @@ body {
 }
 
 .category-title {
-  font-family: 'Playfair Display', serif; /* Serif for category titles */
+  font-family: 'Helvetica', sans-serif; /* Serif for category titles */
   color: #FF6B35; /* Orange */
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
