@@ -393,7 +393,7 @@ body {
   .formula-container {
   flex: 1;
   background-color: #e6e5e0; 
-  padding: 0rem;
+  padding: 1rem;
   border-radius: 10px;
   
   font-family: 'Open Sans', sans-serif;
@@ -844,7 +844,7 @@ body {
 }
 img.header-logo{
   height:12vw !important;
-  max-height: 80px;;
+  max-height: 90px;;
 }
 
 /* Mobile: Stack columns vertically */
