@@ -17,6 +17,7 @@ body {
   min-height: 100vh;
 }
 
+
 .App {
   min-height: 100vh;
 }
@@ -117,6 +118,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-family: 'Open Sans', sans-serif;
+  margin-bottom: 30vh;
 }
 
 .formula-card h2 {
@@ -754,8 +756,10 @@ body {
 .slick-next:before {
   color: #FF6B35; /* Orange arrows */
   font-size: 30px;
+}slick-prev:before, .slick-next:before {visibility: hidden;
+  display: none;
 }
-
+.slick-prev:before, .slick-next:before {visibility: hidden;display:none;}
 /* Mobile Adjustments */
 @media (max-width: 768px) {
   .navigation-menu {
