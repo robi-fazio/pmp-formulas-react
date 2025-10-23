@@ -99,7 +99,7 @@ function Navigation({ activeFormula, setActiveFormula }) {
       {/* Menu Container */}
       <nav className={`navigation-menu ${isOpen ? 'open' : ''}`}>
         <div className="menu-header">
-          <h2>PMP Formulas</h2>
+          <h2>MENU / Scroll right to see all categories</h2>
           <button className="close-btn" onClick={toggleMenu} aria-label="Close menu">
             <FaTimes size={24} />
           </button>

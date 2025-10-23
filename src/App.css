@@ -25,9 +25,12 @@ body {
 /* App Header */
 .App-header {
   background-color: #f0efeb; /* White replacing semi-transparent for crisp look */
-  padding: 1rem;
+  
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-header h1 {
@@ -118,7 +121,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-family: 'Open Sans', sans-serif;
-  margin-bottom: 30vh;
+  margin-bottom: 10vh;
 }
 .formula-container.homepage-container {
   background-color: transparent !important;
@@ -134,6 +137,7 @@ body {
   padding-bottom: 0.5rem;
   font-weight: 300;
   text-transform: uppercase;
+  line-height: 1.2;
 }
 
 .formula-display {
@@ -282,7 +286,7 @@ body {
 
 /* Footer Styles */
 .app-footer {
-  background-color: #e6e5e0; /* Light gray replacing gradient for footer */
+  background-color: #dad6cc; /* Light gray replacing gradient for footer */
   color: #1A1A1A; /* Dark text */
   margin-top: 3rem;
   padding: 2rem 0 1rem 0;
@@ -553,23 +557,23 @@ body {
   top: 20px;
   right: 20px;
   z-index: 1001;
-  background-color: #FF6B35; /* Orange replacing purple */
+  background-color: transparent; /* Orange replacing purple */
   border: none;
   border-radius: 8px;
-  color: #FFFFFF;
+  color: #6d6d6d;
   padding: 12px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  
   transition: all 0.3s ease;
   font-family: 'Open Sans', sans-serif;
 }
 
 .hamburger-btn:hover {
-  background-color: #FFD23F; /* Yellow hover */
-  color: #1A1A1A;
+  background-color: #93ac5b; /* Yellow hover */
+  color: #cfcfcf;
   transform: scale(1.05);
 }
 
@@ -620,8 +624,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
-  background-color: #FF6B35; /* Orange replacing gradient */
-  color: #FFFFFF;
+  background-color: transparent; /* Orange replacing gradient */
+  color: #93ac5b;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -695,8 +699,8 @@ body {
 }
 
 .formula-list li:hover {
-  background-color: #FFF3E0; /* Light orange hover */
-  border-left-color: #FF6B35; /* Orange border */
+  background-color: #d8e0c8; /* Light orange hover */
+  border-left-color: #93ac5b; /* Orange border */
   transform: translateX(5px);
 }
 
@@ -808,10 +812,10 @@ body {
 
 .home-column {
   flex: 1;
-  padding: 1.5rem;
-  background-color: #f9fafb;
+  /* padding: 1.5rem; */
+  background-color: transparent;
   border-radius: 8px;
-  border-left: 4px solid #667eea;
+  /* border-left: 4px solid #667eea; */
 }
 
 .home-column h3 {
@@ -842,4 +846,12 @@ body {
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+}
+.masked-image {
+  -webkit-mask-image: url('/src/images/mask1.png');
+  mask-image: url('/src/images/mask1.png');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
 }

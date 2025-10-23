@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
+
 import Home from './pages/Home';
+import logo from './images/logo.png';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PlannedValue from './components/formulas/PlannedValue';
@@ -64,9 +66,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>PMP Formula Calculator</h1>
-        
-      </header>
+  <img 
+    src={logo} 
+    alt="PMP Formula Calculator Logo" 
+    className="header-logo"
+    onClick={() => setActiveFormula('home')}
+    style={{ cursor: 'pointer' }}
+  />
+</header>
 
       <Navigation activeFormula={activeFormula} setActiveFormula={setActiveFormula} />
       
