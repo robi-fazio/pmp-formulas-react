@@ -567,8 +567,8 @@ body {
 /* Hamburger Button - RIGHT SIDE */
 .hamburger-btn {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 1vh;
+  right: 2vw;
   z-index: 1001;
   background-color: transparent; /* Orange replacing purple */
   border: none;
