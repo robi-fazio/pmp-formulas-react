@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function EVMComprehensive() {
+function EVMComprehensive({ addResult }) {
   // Input states
   const [bac, setBac] = useState('');
   const [percentTimePassed, setPercentTimePassed] = useState('');

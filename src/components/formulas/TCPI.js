@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function TCPI() {
+function TCPI({ addResult }) {
   const [useEac, setUseEac] = useState(false);
   const [bac, setBac] = useState('');
   const [eac, setEac] = useState('');
@@ -20,7 +20,9 @@ function TCPI() {
     } else {
       tcpi = (bacValue - evValue) / (bacValue - acValue);
     }
-    setResult(tcpi.toFixed(4));
+    const formattedResult = tcpi.toFixed(4);
+    setResult(formattedResult);
+    addResult('TCPI', formattedResult);
   };
 
   const getInterpretation = () => {

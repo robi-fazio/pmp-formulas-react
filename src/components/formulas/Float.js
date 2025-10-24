@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Float() {
+function Float({ addResult }) {
   const [method, setMethod] = useState('start');
   const [lateStart, setLateStart] = useState('');
   const [earlyStart, setEarlyStart] = useState('');
@@ -15,7 +15,9 @@ function Float() {
     } else {
       floatValue = parseFloat(lateFinish) - parseFloat(earlyFinish);
     }
-    setResult(floatValue.toFixed(2));
+    const formattedResult = floatValue.toFixed(2);
+    setResult(formattedResult);
+    addResult('Float/Slack', formattedResult);
   };
 
   const getInterpretation = () => {

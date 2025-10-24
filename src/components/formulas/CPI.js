@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 
-function CPI() {
+function CPI({ addResult }) {
   const [ev, setEv] = useState('');
   const [ac, setAc] = useState('');
   const [result, setResult] = useState(null);
 
   const calculate = () => {
     const cpi = parseFloat(ev) / parseFloat(ac);
-    setResult(cpi.toFixed(4));
+    const formattedResult = cpi.toFixed(4);
+    setResult(formattedResult);
+    addResult('Cost Performance Index', formattedResult);
   };
 
   const getInterpretation = () => {

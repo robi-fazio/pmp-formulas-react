@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 
-function PlannedValue() {
+function PlannedValue({ addResult }) {  // ✅ Add prop
   const [bac, setBac] = useState('');
   const [percentTime, setPercentTime] = useState('');
   const [result, setResult] = useState(null);
 
   const calculate = () => {
-    const pv = parseFloat(bac) * (parseFloat(percentTime) / 100);
-    setResult(pv.toFixed(2));
+    const pv = (parseFloat(bac) * parseFloat(percentTime)) / 100;
+    const formattedResult = `$${pv.toFixed(2)}`;
+    setResult(formattedResult);
+    
+    addResult('Planned Value', formattedResult);  // ✅ Add this line
   };
 
   return (

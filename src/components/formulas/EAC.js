@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function EAC() {
+function EAC({ addResult }) {
   const [scenario, setScenario] = useState('1');
   const [bac, setBac] = useState('');
   const [cpi, setCpi] = useState('');
@@ -35,7 +35,9 @@ function EAC() {
       default:
         eac = 0;
     }
-    setResult(eac.toFixed(2));
+    const formattedResult = `$${eac.toFixed(2)}`;
+    addResult('Estimate at Completion', formattedResult);
+    setResult(formattedResult);
   };
 
   const getScenarioDescription = () => {

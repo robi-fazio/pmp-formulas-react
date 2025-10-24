@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function ETC() {
+function ETC({ addResult }) {
   const [eac, setEac] = useState('');
   const [ac, setAc] = useState('');
   const [result, setResult] = useState(null);

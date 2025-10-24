@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 
-function CostVariance() {
+function CostVariance({ addResult }) {
   const [ev, setEv] = useState('');
   const [ac, setAc] = useState('');
   const [result, setResult] = useState(null);
 
   const calculate = () => {
     const cv = parseFloat(ev) - parseFloat(ac);
-    setResult(cv.toFixed(2));
+    const formattedResult = cv.toFixed(2);
+    setResult(formattedResult);
+    addResult('Cost Variance', formattedResult);
   };
 
   const getInterpretation = () => {

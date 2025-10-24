@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 
-function SPI() {
+function SPI({ addResult }) {
   const [ev, setEv] = useState('');
   const [pv, setPv] = useState('');
   const [result, setResult] = useState(null);
 
   const calculate = () => {
     const spi = parseFloat(ev) / parseFloat(pv);
-    setResult(spi.toFixed(4));
+    const formattedResult = spi.toFixed(4);
+    setResult(formattedResult);
+    
+    addResult('SPI', formattedResult);  // ✅ Add this line
   };
 
   const getInterpretation = () => {

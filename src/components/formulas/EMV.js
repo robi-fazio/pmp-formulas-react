@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function EMV() {
+function EMV({ addResult }) {
   const [probability, setProbability] = useState('');
   const [impact, setImpact] = useState('');
   const [result, setResult] = useState(null);

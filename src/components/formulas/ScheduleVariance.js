@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 
-function ScheduleVariance() {
+function ScheduleVariance({ addResult }) { 
   const [ev, setEv] = useState('');
   const [pv, setPv] = useState('');
   const [result, setResult] = useState(null);
 
   const calculate = () => {
     const sv = parseFloat(ev) - parseFloat(pv);
-    setResult(sv.toFixed(2));
+    const formattedResult = `$${sv.toFixed(2)}`;
+    setResult(formattedResult);
+    
+    addResult('Schedule Variance', formattedResult);  // ✅ Add this line
   };
 
   const getInterpretation = () => {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function PaybackPeriod() {
+function PaybackPeriod({ addResult }) {
   const [initialInvestment, setInitialInvestment] = useState('');
   const [annualCashInflow, setAnnualCashInflow] = useState('');
   const [result, setResult] = useState(null);
@@ -9,7 +9,9 @@ function PaybackPeriod() {
     const investment = parseFloat(initialInvestment);
     const cashflow = parseFloat(annualCashInflow);
     const payback = investment / cashflow;
-    setResult(payback.toFixed(2));
+    const formattedResult = payback.toFixed(2);
+    setResult(formattedResult);
+    addResult('Payback Period', formattedResult);
   };
 
   const getInterpretation = () => {

@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 
-function EarnedValue() {
+function EarnedValue({ addResult }) {
   const [bac, setBac] = useState('');
   const [percentWork, setPercentWork] = useState('');
   const [result, setResult] = useState(null);
 
   const calculate = () => {
     const ev = parseFloat(bac) * (parseFloat(percentWork) / 100);
-    setResult(ev.toFixed(2));
+    const formattedResult = `$${ev.toFixed(2)}`;
+    setResult(formattedResult);
+    
+    // NEW: Add result to pills
+    addResult('Earned Value', formattedResult);
   };
 
   return (

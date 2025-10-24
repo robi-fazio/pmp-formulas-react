@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function ROI() {
+function ROI({ addResult }) {
   const [netProfit, setNetProfit] = useState('');
   const [investment, setInvestment] = useState('');
   const [result, setResult] = useState(null);
@@ -9,7 +9,10 @@ function ROI() {
     const profit = parseFloat(netProfit);
     const invest = parseFloat(investment);
     const roi = (profit / invest) * 100;
-    setResult(roi.toFixed(2));
+    const formattedResult = roi.toFixed(2);
+    
+    setResult(formattedResult);
+    addResult('Return on Investment', formattedResult);
   };
 
   const getInterpretation = () => {

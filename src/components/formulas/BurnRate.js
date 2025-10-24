@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 
-function BurnRate() {
+function BurnRate({ addResult }) {
   const [cpi, setCpi] = useState('');
   const [result, setResult] = useState(null);
 
   const calculate = () => {
     const burnRate = 1 / parseFloat(cpi);
-    setResult(burnRate.toFixed(4));
+    const formattedResult = burnRate.toFixed(4);
+    setResult(formattedResult);
+    addResult('Burn Rate', formattedResult);
   };
 
   const getInterpretation = () => {

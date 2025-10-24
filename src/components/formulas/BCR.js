@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function BCR() {
+function BCR({ addResult }) {
   const [benefits, setBenefits] = useState('');
   const [costs, setCosts] = useState('');
   const [result, setResult] = useState(null);
@@ -9,7 +9,9 @@ function BCR() {
     const ben = parseFloat(benefits);
     const cost = parseFloat(costs);
     const bcr = ben / cost;
-    setResult(bcr.toFixed(4));
+    const formattedResult = bcr.toFixed(4);
+    setResult(formattedResult);
+    addResult('Benefit Cost Ratio', formattedResult);
   };
 
   const getInterpretation = () => {

@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 
-function VAC() {
+function VAC({ addResult }) {
   const [bac, setBac] = useState('');
   const [eac, setEac] = useState('');
   const [result, setResult] = useState(null);
 
   const calculate = () => {
     const vac = parseFloat(bac) - parseFloat(eac);
-    setResult(vac.toFixed(2));
+    const formattedResult = vac.toFixed(2);
+    setResult(formattedResult);
+
+    addResult('VAC', formattedResult);
   };
 
   const getInterpretation = () => {

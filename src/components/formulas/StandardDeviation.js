@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function StandardDeviation() {
+function StandardDeviation({ addResult }) {
   const [pessimistic, setPessimistic] = useState('');
   const [optimistic, setOptimistic] = useState('');
   const [result, setResult] = useState(null);
@@ -9,7 +9,9 @@ function StandardDeviation() {
     const p = parseFloat(pessimistic);
     const o = parseFloat(optimistic);
     const sd = (p - o) / 6;
-    setResult(sd.toFixed(2));
+    const formattedResult = sd.toFixed(2);
+    setResult(formattedResult);
+    addResult('Standard Deviation', formattedResult);
   };
 
   return (

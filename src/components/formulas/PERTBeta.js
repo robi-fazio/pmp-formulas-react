@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function PERTBeta() {
+function PERTBeta({ addResult }) {
   const [optimistic, setOptimistic] = useState('');
   const [mostLikely, setMostLikely] = useState('');
   const [pessimistic, setPessimistic] = useState('');
@@ -11,7 +11,9 @@ function PERTBeta() {
     const ml = parseFloat(mostLikely);
     const p = parseFloat(pessimistic);
     const estimate = (o + (4 * ml) + p) / 6;
-    setResult(estimate.toFixed(2));
+    const formattedResult = estimate.toFixed(2);
+    setResult(formattedResult);
+    addResult('PERT - Beta Distribution', formattedResult);
   };
 
   return (

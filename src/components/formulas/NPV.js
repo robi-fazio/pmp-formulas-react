@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function NPV() {
+function NPV({ addResult }) {
   const [initialInvestment, setInitialInvestment] = useState('');
   const [discountRate, setDiscountRate] = useState('');
   const [cashFlows, setCashFlows] = useState([{ year: 1, amount: '' }]);
@@ -32,8 +32,12 @@ function NPV() {
         npv += pv;
       }
     });
+    const formattedResult = npv.toFixed(2);
     
-    setResult(npv.toFixed(2));
+    // Add result to pills
+    setResult(formattedResult);
+    addResult('Net Present Value', `$${formattedResult}`);
+    
   };
 
   const getInterpretation = () => {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function PERTTriangular() {
+function PERTTriangular({ addResult }) {
   const [optimistic, setOptimistic] = useState('');
   const [mostLikely, setMostLikely] = useState('');
   const [pessimistic, setPessimistic] = useState('');
@@ -11,7 +11,9 @@ function PERTTriangular() {
     const ml = parseFloat(mostLikely);
     const p = parseFloat(pessimistic);
     const estimate = (o + ml + p) / 3;
-    setResult(estimate.toFixed(2));
+    const formattedResult = estimate.toFixed(2);
+    setResult(formattedResult);
+    addResult('PERT - Triangular Distribution', formattedResult);
   };
 
   return (

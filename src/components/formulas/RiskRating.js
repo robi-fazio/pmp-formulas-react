@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function RiskRating() {
+function RiskRating({ addResult }) {
   const [probability, setProbability] = useState('');
   const [impact, setImpact] = useState('');
   const [result, setResult] = useState(null);
@@ -9,7 +9,9 @@ function RiskRating() {
     const prob = parseFloat(probability);
     const imp = parseFloat(impact);
     const rating = prob * imp;
-    setResult(rating.toFixed(4));
+    const formattedResult = rating.toFixed(4);
+    setResult(formattedResult);
+    addResult('Risk Rating', formattedResult);
   };
 
   const getRiskLevel = () => {

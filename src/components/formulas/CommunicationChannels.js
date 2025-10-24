@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 
-function CommunicationChannels() {
+function CommunicationChannels({ addResult }) {
   const [teamMembers, setTeamMembers] = useState('');
   const [result, setResult] = useState(null);
 
   const calculate = () => {
     const n = parseInt(teamMembers);
     const channels = (n * (n - 1)) / 2;
-    setResult(channels);
+    const formattedResult = channels.toFixed(2);
+    setResult(formattedResult);
+    addResult('Communication Channels', formattedResult);
   };
 
   return (
