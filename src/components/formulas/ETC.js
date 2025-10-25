@@ -5,9 +5,30 @@ function ETC({ addResult }) {
   const [ac, setAc] = useState('');
   const [result, setResult] = useState(null);
 
+  // Debug: Check if addResult is received
+  console.log('ETC component - addResult prop:', addResult);
+  console.log('ETC component - addResult type:', typeof addResult);
+
   const calculate = () => {
+    console.log('Calculate button clicked');
+    console.log('EAC:', eac, 'AC:', ac);
+    
     const etc = parseFloat(eac) - parseFloat(ac);
-    setResult(etc.toFixed(2));
+    const formattedResult = `$${etc.toFixed(2)}`;
+    
+    console.log('Calculated ETC:', formattedResult);
+    console.log('About to call addResult...');
+    
+    setResult(formattedResult);
+    
+    // Check if addResult exists before calling
+    if (typeof addResult === 'function') {
+      console.log('Calling addResult function');
+      addResult('Estimate to Complete', formattedResult);
+      console.log('addResult called successfully');
+    } else {
+      console.error('addResult is NOT a function!', addResult);
+    }
   };
 
   return (
@@ -49,10 +70,10 @@ function ETC({ addResult }) {
       {result !== null && (
         <div className="result-section">
           <h3>Result:</h3>
-          <p className="result-value">Estimate to Complete (ETC) = ${result}</p>
+          <p className="result-value">Estimate to Complete (ETC) = {result}</p>
           <div className="interpretation">
             <h4>Interpretation:</h4>
-            <p>You need ${result} more to complete all remaining project work based on current forecasts.</p>
+            <p>You need {result} more to complete all remaining project work based on current forecasts.</p>
           </div>
         </div>
       )}

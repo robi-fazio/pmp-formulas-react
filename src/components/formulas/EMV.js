@@ -9,7 +9,10 @@ function EMV({ addResult }) {
     const prob = parseFloat(probability);
     const imp = parseFloat(impact);
     const emv = prob * imp;
-    setResult(emv.toFixed(2));
+    const formattedResult = emv.toFixed(2);
+   
+    setResult(formattedResult);
+     addResult('Expected Monetary Value', formattedResult);
   };
 
   const getInterpretation = () => {
