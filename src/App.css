@@ -946,6 +946,41 @@ img.header-logo{
 .pill-remove:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
+/* Copy Button with SVG Icon */
+.pill-copy {
+  background: none;
+  border: none;
+  color: #1A1A1A;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: 0.5rem;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  opacity: 0.6;
+}
+
+.pill-copy:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+  opacity: 1;
+}
+
+.pill-copy:active {
+  transform: scale(0.9);
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.pill-copy svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+}
+
+
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
