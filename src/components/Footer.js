@@ -7,12 +7,12 @@ function Footer() {
     <footer className="app-footer">
       <div className="footer-content">
         <div className="footer-section">
-          <h3>PMP Formula Calculator</h3>
+          <h3>PM Formula Calculator</h3>
           <p>Professional Project Management Formulas at your fingertips</p>
         </div>
         
         <div className="footer-section">
-          <h4>Resources</h4>
+          <h4>Recommended Resources</h4>
           <ul>
             <li><a href="https://www.pmi.org" target="_blank" rel="noopener noreferrer">PMI.org</a></li>
             <li><a href="https://www.pmi.org/certifications/project-management-pmp" target="_blank" rel="noopener noreferrer">PMP Certification</a></li>
@@ -26,8 +26,8 @@ function Footer() {
       </div>
       
       <div className="footer-bottom">
-        <p>&copy; {currentYear} PMP Formula Calculator. All rights reserved.</p>
-        <p>Educational purposes only. Not affiliated with PMI.</p>
+        <p>&copy; {currentYear} Project Management Formula Calculator. All rights reserved.</p>
+        <p>Educational purposes only. Not affiliated with PMI or other organizations.</p>
       </div>
     </footer>
   );
